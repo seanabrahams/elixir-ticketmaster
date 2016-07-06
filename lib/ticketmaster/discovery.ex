@@ -80,7 +80,6 @@ defmodule Ticketmaster.Discovery do
   end
 
   def process_response_body(body) do
-    body
-    |> Poison.decode!
+    Ticketmaster.Shared.process_response_body(body)
   end
 end
